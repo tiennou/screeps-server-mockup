@@ -9,7 +9,7 @@
     "build": "tsc",
     "coverage": "npm run build && nyc mocha dist/test --ui tdd --exit",
     "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\" \"utils/**/*.ts\"",
-    "prepare": "npm run build",
+    "prepare": "tsc --noCheck",
     "prepublishOnly": "npm test && npm run lint",
     "test": "npm run build && mocha dist/test --ui tdd --exit"
   },
